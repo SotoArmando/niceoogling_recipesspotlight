@@ -1,0 +1,2 @@
+class ContentPlace < ApplicationRecord
+end

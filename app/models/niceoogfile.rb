@@ -1,0 +1,2 @@
+class Niceoogfile < ApplicationRecord
+end
