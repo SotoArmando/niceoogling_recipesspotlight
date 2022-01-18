@@ -1,0 +1,27 @@
+<%= form_with(model: librete) do |form| %>
+  <% if librete.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(librete.errors.count, "error") %> prohibited this librete from being saved:</h2>
+
+      <ul>
+        <% librete.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :librete, style: "display: block" %>
+    <%= form.text_field :librete %>
+  </div>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

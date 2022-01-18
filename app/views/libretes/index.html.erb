@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Libretes</h1>
+
+<div id="libretes">
+  <% @libretes.each do |librete| %>
+    <%= render librete %>
+    <p>
+      <%= link_to "Show this librete", librete %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New librete", new_librete_path %>

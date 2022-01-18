@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @librete %>
+
+<div>
+  <%= link_to "Edit this librete", edit_librete_path(@librete) %> |
+  <%= link_to "Back to libretes", libretes_path %>
+
+  <%= button_to "Destroy this librete", @librete, method: :delete %>
+</div>
