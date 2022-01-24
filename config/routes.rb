@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'tastydescendant/listrecipes'
+  get 'tastydescendant/detailrecipe'
+  get 'tastydescendant/listtags'
+  get 'tastydescendant/listfeeds'
+  get 'tastydescendant/listsimilarities'
+  get 'tastydescendant/autocomplete'
+  get 'tastydescendant/index'
   resources :histories
   resources :schedules
   resources :libretes

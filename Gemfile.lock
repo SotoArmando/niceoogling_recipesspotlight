@@ -91,6 +91,9 @@ GEM
     erubi (1.10.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    httparty (0.13.7)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     importmap-rails (1.0.2)
@@ -103,6 +106,7 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    json (1.8.6)
     loofah (2.13.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -115,6 +119,7 @@ GEM
     mini_portile2 (2.7.1)
     minitest (5.15.0)
     msgpack (1.4.2)
+    multi_xml (0.6.0)
     net-imap (0.2.3)
       digest
       net-protocol
@@ -218,6 +223,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  httparty (~> 0.13.7)
   importmap-rails
   jbuilder
   pg (~> 1.1)
