@@ -3,6 +3,12 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.7.4"
 
+gem 'image_optim'
+gem 'image_optim_pack'
+gem 'rmagick'
+
+gem 'rack-cors'
+
 gem 'httparty', '~> 0.13.7'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"

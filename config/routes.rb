@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'tastydescendant/listsimilarities'
   get 'tastydescendant/autocomplete'
   get 'tastydescendant/index'
+  get 'tastydescendant/getimage'
   resources :histories
   resources :schedules
   resources :libretes

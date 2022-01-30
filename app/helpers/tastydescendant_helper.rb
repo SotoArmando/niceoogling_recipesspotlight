@@ -1,5 +1,6 @@
 require 'httparty'
-
+require 'rmagick'
+include Magick
 
 module TastydescendantHelper
     include HTTParty
@@ -23,9 +24,22 @@ module TastydescendantHelper
           headers: {
             "x-rapidapi-host" => "tasty.p.rapidapi.com",
             "x-rapidapi-key" => "d47e2c0a26msha5142819817b97bp1bce93jsne76fd5e28006",
-            },
-          :debug_output => $stdout).to_json
+            }).to_hash
       end
+    end
+
+    def descendimage(url, width = 300,height = 300)
+      data = Rails.cache.fetch([url], :expires => 31.days) do
+        data = ''
+        HTTParty.get(url, stream_body: true) do |fragment|
+          data += fragment;
+        end
+        Hash["blob" => data]
+      end
+      geom = "#{width}x#{height}"
+      img = Image.from_blob(data["blob"])[0]
+      img.change_geometry!(geom) { |cols, rows| img.thumbnail! cols, rows }
+      return img.to_blob
     end
 end
   
